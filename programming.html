@@ -1,0 +1,243 @@
+<!DOCTYPE html><!--220610609 길미예-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+    *{
+      padding: 0;
+      margin: 0;
+    }
+
+    body{
+      font-family: "THE명품고딕R_U";
+      font-size: 14px;
+      color:#444444;
+    }
+
+    li{
+      list-style-type: none;
+    }
+
+    .clear{
+      clear: both;
+    }
+
+    .lalaland {
+      margin-left: 50px;
+    }
+
+    header{
+     width: 100%;
+     height: 100px;
+     margin: 0 auto;
+
+    }
+
+    #logo{
+     float: left;
+     margin: 20px 0 0 20px;
+
+    }
+
+    #menus{
+     float: right;
+
+     margin-right: 50px;
+
+    }
+
+    #main_menu{
+      margin-top: 20px;
+      font-family: "HS봄바람체 2.0";
+      font-size: 14px;
+      color: black;
+
+    }
+
+    #main_menu li{
+      display: inline;
+      margin-left: 50px;
+    }
+    #contents {
+      width: 1140px;
+      margin: 0 auto;
+    }
+
+    #sub_menu{
+      width: 234px;
+      float: left;
+      margin-top: 25px;
+
+    }
+
+    #sub_menu h3{
+      font-size: 18px;
+      color: white;
+      padding:12px;
+      background-color: #2c2a29;
+    }
+
+    #sub_menu li{
+      padding: 10px;
+      border-bottom: dotted 1px #cccccc;
+    }
+
+    #main_contents{
+      width: 880px;
+      float: right;
+      margin-top: 25px;
+
+    }
+
+    #main_contents h3{
+      font-size: 22px;
+      font-family: "HS봄바람체 2.0";
+      padding-bottom: 8px;
+      border-bottom: solid 1px #cccccc;
+    }
+
+    #main_contents p{
+      margin-top: 30px;
+      line-height: 180%;
+    }
+
+    #main_contents #figure{
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    #main_contents li{
+      padding: 5px;
+    }
+
+    footer {
+      width: 100%;
+      height: 150px;
+      margin-top: 30px;
+      background-color:#2c2a29;
+
+    }
+
+    #footer_box{
+      width: 1140px;
+      height: 150px;
+      margin: 0 auto;
+
+    }
+
+    #footer_logo{
+      float: left;
+      margin: 50px 0 0 30px;
+
+    }
+
+    #address{
+      float: right;
+      margin: 50px 30px 0 0;
+      color: white;
+
+    }
+
+    a{
+     text-decoration : none;
+     color:black;
+     }
+
+    </style>
+    <title></title>
+  </head>
+  <body>
+
+    <header>
+      <div id="logo">
+          <a href="index.html"><img src="img/logo.png"></a>
+      </div>
+      <nav id="menus">
+
+        <ul id="main_menu">
+          <li><a href="ABOUT.html">ABOUT</a></li>
+          <li><a href="PORTFOLIO_vedio.html">
+              <a href="PORTFOLIO_design.html">
+              <a href="programming.html">
+                PORTFOLIO</li>
+
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main_img">
+    </section>
+
+    <section id="contents">
+
+    <nav id="sub_menu">
+      <h3>PORTFOLIO</h3>
+      <ul>
+        <li><a href="PORTFOLIO_video.html">VIDEO</a></li>
+        <li><a href="PORTFOLIO_design.html">DESIGN</a></li>
+        <li><a href="programming.html">PROGRAMMING</a></li>
+
+      </ul>
+    </nav>
+
+<div id="main_contents">
+
+     <div class="card">
+
+      <h3>PORTFPLIO_PROGRAMMING</h3>
+      <h5>3D POSTER</h5>
+      <p>3D디자인 중간직무수행능력평가 결과물로 3D MAX로 3D 오브젝트를 이용하여 만든 포스터입니다. <br>
+        과제하는 중 멍 때릴 때
+        내 머릿속이라는 주제로 무중력을 표현하고자 하였습니다.</p>
+
+      <div id="figure">
+        <img src="img/3D1.jpg">
+
+      </div>
+      </div>
+
+      <div class="card">
+
+      <h5>3D ANIMATION</h5>
+      <p>3D디자인 기말직무수행능력평가 결과물로 Z FLIP광고영상을 3D 애니메이션으로 제작하였습니다.<br>
+        Z FLIP의 열리고 닫히는
+        모습을 애니메이션으로 표현하였습니다. </p>
+
+      <div id="figure">
+        <video width="640" height="480" controls>
+        <source src="3D2.mp4" type="video/mp4">
+        <source src="3D2.ogg" type="video/ogg">
+        <source src="3D2.webm" type="video/webm">
+        <object data="3D2.mp4"width="640" height="480">
+        <embed src="3D2.swf" width="640" height="480">
+        </object>
+        </video>
+
+       </div>
+     </div>
+
+     <div class="card">
+
+     <h5>프로그래밍 웹사이트</h5>
+     <p>프로그래밍 중간직무수행능력평가 결과물로 라라랜드를 주제로 css와 html을 써서 제작하였습니다. </p>
+
+      <div clsss="lalaland">
+
+        <img src="img/lalaland.jpg" >
+
+      </div>
+
+    </section>
+    <div class="clear"></div> <!--float 속성 해제-->
+    <footer>
+    <div id="footer_box">
+    <ul id="address">
+      <li> Copylight ©Gil MI YE </li>
+
+    </ul>
+    </div>
+  </footer>
+
+  </body>
+</html>
