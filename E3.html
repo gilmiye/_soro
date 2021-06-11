@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title></title>
+
+    <style>
+
+    /*image_slide*/
+    #slide{
+      height:300px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    #slide ul{
+      width:400%;
+      height:100%;
+      transition:1s;
+    }
+
+    #slide ul:after{
+      content:"";
+      display:block;
+      clear:both;
+    }
+    #slide li{
+      float:left;
+      width:25%;
+      height:100%;
+    }
+
+    #slide li:nth-child(1){
+      background-image: url("img/imgslide_bg.jpg");
+    }
+
+    #slide li:nth-child(2)
+    {background:#ffa;}
+
+    #slide li:nth-child(3)
+    {
+      background:#faF;}
+
+    #slide li:nth-child(4)
+    {
+      background:#aaf;}
+
+    #slide input{
+      display:none;
+    }
+    
+    #slide .pos{
+      text-align:center;
+      position:absolute;
+      bottom:10px;
+      left:0;
+      width:100%;
+      text-align:center;
+    }
+
+    #pos1:checked~ul{
+      margin-left:0%;
+    }
+
+    #pos2:checked~ul{
+      margin-left:-100%;
+    }
+
+    #pos3:checked~ul{
+      margin-left:-200%;
+    }
+
+    #pos4:checked~ul{
+      margin-left:-300%;
+    }
+
+    #pos1:checked~.pos>label:nth-child(1){
+      background:#666;
+    }
+
+    #pos2:checked~.pos>label:nth-child(2){
+      background:#666;
+    }
+
+    #pos3:checked~.pos>label:nth-child(3){
+      background:#666;
+    }
+
+    #pos4:checked~.pos>label:nth-child(4){
+      background:#666;
+    }
+
+    /*main*/
+
+    #main_contents{
+      width: 1280px;
+      height: 1000px;
+      /*border: solid 1px green;*/
+      margin: auto;
+    }
+
+    #main_title{
+      font-size: 80px;
+      color: #007CA2;
+      font-family: "윤고래체";
+      text-align: center;
+      /*border: solid 1px white;*/
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    #main_text{
+      font-size: 20px;
+      color: white;
+      font-family: "Yoon 윤매거진 700";
+      text-align: left;
+      /*border: solid 1px white;*/
+      width: 1000px;
+      margin: 50px 0 0 200px;
+    }
+
+
+    body{
+      background-image:url("img/Sea_bg2.png");
+      background-color: white;
+      background-repeat: no-repeat;
+    }
+
+    #image_gallery{
+      /*border: solid 1px red;*/
+      width: 1280px;
+      margin: 0 auto;
+      margin-top: 50px;
+      border: solid 1px #B4D8E4;
+    }
+
+    .image_box{
+      width: 400px;
+      height: 600px;
+      background-color: white;
+      border: solid 1px #B4D8E4;
+      border-radius: 15px;
+      box-shadow: 6px 6px 20px #B4D8E4;
+      display: inline-block;
+      margin-right: 30px;
+    }
+
+    #image_box_fin{
+      width: 400px;
+      height: 600px;
+      background-color: white;
+      border: solid 1px #B4D8E4;
+      border-radius: 15px;
+      box-shadow: 6px 6px 20px #B4D8E4;
+      display: inline-block;
+      margin-right: 0px;
+    }
+
+     .image{
+      width: 340px;
+      height: 470px;
+      padding: 30px;
+      padding-top: 30px;
+      border-top-left-radius: 180px;
+      border-top-right-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-bottom-left-radius: 50px;
+    }
+
+    #sea_title{
+      font-size: 40px;
+      color: #007CA2;
+      font-family: "윤고래체";
+      text-align: center;
+      /*border: solid 1px red;*/
+      text-align: center;
+      width: 400px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .orange{
+      color: orange;
+      font-size: 50px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+
+    #is_img1, #is_img2, #is_img3{
+      display: inline-block;
+      width: 230px;
+      margin-right: 120px;
+      margin-top: 40px;
+    }
+
+    #is_img1{
+      margin-left: 150px;
+    }
+
+    #is_text{
+      font-size: 30px;
+      color: #007CA2;
+      font-family: "윤고래체";
+      text-align: left;
+      /*border: solid 1px red;*/
+      width: 300px;
+      margin:50px;
+    }
+
+    #is_text1-1, #is_text2-1, #is_text3-1{
+      font-size: 14px;
+      color: #444;
+      font-family: "Yoon 윤매거진 700";
+      text-align: left;
+      float: left;
+      /*border: solid 1px red;*/
+      width: 500px;
+      margin: 10px 0 0 55px;
+    }
+
+    .orange{
+      color: orange;
+      font-size: 35px;
+      font-weight: bold;
+    }
+
+    .img{
+      margin-bottom: 50px;
+    }
+
+
+    </style>
+
+  </head>
+  <body>
+
+    <div id="page">
+
+      <!--header-->
+
+      <header>
+
+        <nav><!--nav-->
+          <div id="logo"><a href="index.html"><img id="logo_img" src="img/logo.png"></a></div>
+
+          <div id="menu">
+            <ul class="menu_link">
+
+              <li class="mainmenu"><a href="E1.html">동해</a>
+                <ul class="submenu">
+                 <li><a href="E1.html">특징</a></li>
+                 <li><a href="E2.html">해수욕장</a></li>
+                 <li><a href="E3.html">수산물</a></li>
+                </ul>
+              </li>
+
+             <li class="mainmenu"><a href="W1.html">서해</a>
+               <ul class="submenu">
+                 <li><a href="w1.html">특징</a></li>
+                 <li><a href="w2.html">해수욕장</a></li>
+                 <li><a href="w3.html">수산물</a></li>
+               </ul>
+             </li>
+
+              <li class="mainmenu"><a href="S1.html">남해</a>
+                <ul class="submenu">
+                  <li><a href="S1.html">특징</a></li>
+                  <li><a href="S2.html">해수욕장</a></li>
+                  <li><a href="S3.html">수산물</a></li>
+                </ul>
+              </li>
+
+             </ul>
+            </div>
+          </nav>
+        </header>
+
+        <main>
+          <div id="main_contents">
+
+          <p id="main_title">동해의 수산물</p>
+
+          <div id="image_gallery">
+
+            <div id="slide">
+              <input type="radio" name="pos" id="pos1" checked>
+              <input type="radio" name="pos" id="pos2">
+              <input type="radio" name="pos" id="pos3">
+              <input type="radio" name="pos" id="pos4">
+              <ul>
+                <li id="isimg">
+                  <img id="is_img1" src="img/is1.png">
+                  <img id="is_img2" src="img/is2.png">
+                  <img id="is_img3" src="img/is3.png">
+                </li>
+                <li><img id="is_img2" src="img/is2.png"></li>
+
+              </ul>
+              <p class="pos">
+                <label for="pos1"></label>
+                <label for="pos2"></label>
+                <label for="pos3"></label>
+                <label for="pos4"></label>
+              </p>
+            </div>
+
+            <div id="is_text">
+
+              <div class="img">
+              <ul id="is_text1"><span class="orange">𓇼</span> 흰 꼴두기</ul>
+              <li id="is_text1-1"></li>
+              </div>
+
+              <div class="img">
+              <ul id="is_text2"><span class="orange">𓇼</span>벵에돔</ul>
+              <li id="is_text2-1"></li>
+              </div>
+
+              <div class="img">
+              <ul id="is_text3"><span class="orange">𓇼</span>나팔고둥</ul>
+              <li id="is_text3-1"></li>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        </main>
+
+      <footer>
+        <div id="footer_content">
+          Kaywon University of Art and Design 계원예술대학교 디지털미디어디자인과 22061009 길미예
+
+<br>
+TEL : 010-9095-9890&nbsp;&nbsp; | &nbsp;&nbsp;
+E-mail : gilmiye@naver.com &nbsp;&nbsp; | &nbsp;&nbsp;SNS : @ miye_0516
+<br><br>
+COPYRIGHT BY GIL MI YEE ALL RIGHTS RESERVED.
+        </div>
+      </footer>
+
+
+
+      </div><!--page-->
+  </body>
+</html>
